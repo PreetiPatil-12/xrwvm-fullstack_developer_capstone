@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 const Register = () => {
@@ -20,6 +21,7 @@ const Register = () => {
       body: JSON.stringify({ userName, password, firstName, lastName, email }),
     });
     const json = await res.json();
+
     if (json.status) {
       sessionStorage.setItem("username", json.userName);
       window.location.href = window.location.origin;
